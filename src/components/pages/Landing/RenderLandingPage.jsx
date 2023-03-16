@@ -29,7 +29,14 @@ function RenderLandingPage(props) {
       <div className="header">
         <div className="header-text-container">
           <h1>Asylum Office Grant Rate Tracker</h1>
-          <h3>
+          <h3
+            style={{
+              padding: '.1em',
+              fontSize: '.5em',
+              marginLeft: '5em',
+              marginRight: '5em',
+            }}
+          >
             The Asylum Office Grant Rate Tracker provides asylum seekers,
             researchers, policymakers, and the public an interactive tool to
             explore USCIS data on Asylum Office decisions
