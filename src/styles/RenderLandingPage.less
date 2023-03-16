@@ -8,6 +8,22 @@
 @tablet-large: ~"(min-width: 769px) and (max-width: 1024px)";
 @laptop: ~"(min-width: 1025px) and (max-width: 1280px)";
 
+@font-face {
+    font-family: 'MonetaBold';
+    src: url('./assets/Fonts/Moneta_Bold/Moneta_Bold.otf') format('embedded-opentype'),
+        url('./assets/Fonts/Moneta_Bold/Moneta_Bold.woff2') format('woff2'),
+        url('./assets/Fonts/Moneta_Bold/Moneta_Bold.woff') format('woff'),
+        url('./assets/Fonts/Moneta_Bold/Moneta_Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BeatriceRegular';
+    src: url('./assets/Fonts/Beatrice_Regular/Beatrice_Regular.otf') format('embedded-opentype'),
+        url('./assets/Fonts/Beatrice_Regular/Beatrice_Regular.woff2') format('woff2'),
+        url('./assets/Fonts/Beatrice_Regular/Beatrice_Regular.woff') format('woff'),
+        url('./assets/Fonts/Beatrice_Regular/Beatrice_Regular.ttf') format('truetype');
+}
+
 .header {
     background-color: @main-color;
     display: flex;
@@ -92,7 +108,7 @@
 .middle-section-text-container {
     width: 700px;
     text-align: center;
-    
+
 }
 
 .middle-section-text-container h3 {
@@ -215,9 +231,9 @@
     }
 }
 
+
 .back-to-top {
     width: 8%;
-    font-size: 1.2rem;
     cursor: pointer;
     color: black;
     margin: 5% auto;

@@ -10,9 +10,9 @@ import GrantRatesOverTimeImg from '../../../styles/Images/line-graph-no-text.png
 import HrfPhoto from '../../../styles/Images/paper-stack.jpg';
 import '../../../styles/RenderLandingPage.less';
 import { Button } from 'antd';
-
 import { useHistory } from 'react-router-dom';
 import { Table } from '.';
+
 // for the purposes of testing PageNav
 import PageNav from '../../common/PageNav';
 
@@ -137,14 +137,23 @@ function RenderLandingPage(props) {
             </p>
           </div>
         </div>
+
         <Button
           type="default"
-          style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
+          style={{
+            backgroundColor: '#404C4A',
+            color: '#FFFFFF',
+            fontFamily: 'BeatriceRegular',
+          }}
           onClick={() => scrollToTop()}
         >
           Read More
         </Button>
-        <p onClick={() => scrollToTop()} className="back-to-top">
+        <p
+          style={{ fontFamily: 'BeatriceRegular', fontSize: '.5em' }}
+          onClick={() => scrollToTop()}
+          className="back-to-top"
+        >
           Back To Top ^
         </p>
       </div>
