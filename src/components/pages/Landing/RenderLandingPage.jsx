@@ -45,7 +45,7 @@ function RenderLandingPage(props) {
           alt="Grant Rates By Office"
         />
         <img
-          style={{ width: '15em', height: '13em' }}
+          style={{ width: '13em', height: '11em' }}
           src={GrantRatesByNationalityImg}
           alt="Grant Rates By Nationality"
         />
