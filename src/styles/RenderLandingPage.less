@@ -10,7 +10,7 @@
 
 .header {
     background-color: @main-color;
-    display:flex;
+    display: flex;
     text-align: center;
     width: 100%;
     height: 20vh;
@@ -25,12 +25,13 @@
 
 .header-text-container {
     text-align: center;
+    font-size: 1.5rem;
     width: 100%;
     align-items: center;
 }
 
 .header-text-container h1 {
-    font-size: 3rem;
+    font-size: 1.5rem;
     color: @white;
     font-family: 'moneta';
 }
@@ -38,16 +39,39 @@
 .header-text-container h3 {
     font-family: 'beatrice regular';
     color: @white;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
-// .graphs-section {
-//  ADD THIS BACK IN WHEN YOU HAVE THE GRAPHS SECTION
-// }
+.graphs-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-basis: 30%;
+    width: 100%;
+
+    //  ADD THIS BACK IN WHEN YOU HAVE THE GRAPHS SECTION
+}
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 3%;
+
+}
+
+.image-text-container {
+    display: flex;
+    font-family: 'acumin';
+    font-size: .8rem;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 3%;
+}
 
 .view-more-data-btn-container {
-    height: 44px;
-    width: 180px;
+    display: flex;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 10%;
@@ -72,12 +96,114 @@
 
 .middle-section-text-container h3 {
     font-family: 'acumin';
-    font-size: 1.4rem;
+    font-size: 1rem;
+    padding: 2rem;
 }
 
-// .bottom-section {
 //      ADD THIS BACK IN WHEN YOU HAVE A BOTTOM SECTION
-// }
+
+.bottom-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-basis: 30%;
+    width: 100%;
+    font-family: 'acumin';
+    font-size: 1.5rem;
+    width: 100%;
+    height: 100%;
+
+    h1 {
+        font-family: 'acumin';
+        font-size: 2.5rem;
+        padding: 2rem;
+    }
+
+    h3 {
+        font-family: 'acumin';
+        font-size: 1rem;
+    }
+
+    p {
+        text-align: center;
+        font-family: 'acumin';
+        font-size: 1rem;
+    }
+
+
+}
+
+.graph-info-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1.5rem;
+    flex-basis: 30%;
+    width: 100%;
+    padding: 2rem;
+}
+
+.thirty-six {
+    display: flex;
+    justify-content: center;
+}
+
+.trump-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 30%;
+    padding: 1rem;
+
+    h1 {
+        font-family: 'acumin';
+        font-size: 1.7rem;
+        padding: 2rem;
+    }
+}
+
+.five-percent {
+    display: flex;
+    justify-content: center;
+}
+
+.ny-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 30%;
+    padding: 1rem;
+
+    h1 {
+        font-family: 'acumin';
+        font-size: 1.7rem;
+        padding: 2rem;
+    }
+}
+
+.six {
+    display: flex;
+    justify-content: center;
+}
+
+.six-times {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 30%;
+    padding: 1rem;
+
+    h1 {
+        font-family: 'acumin';
+        font-size: 1.7rem;
+        padding: 2rem;
+    }
+}
 
 .back-to-top {
     width: 8%;
@@ -95,37 +221,39 @@
 }
 
 .ant-btn:hover {
-    border-color: @secondary-color  !important;
+    border-color: @secondary-color !important;
 }
 
 @media @mobile-small {
     .header {
         height: 30vh;
-       display: block;
-       position: relative;
+        display: block;
+        position: relative;
     }
-    .hrf-logo-img-container{
-       height:fit-content;
-       position: absolute;
-       top: 0;
-       left: 0;
-       margin: 2% 2%;
+
+    .hrf-logo-img-container {
+        height: fit-content;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 2% 2%;
     }
 
     .hrf-logo-img-container img {
         height: 30px;
         width: 48px;
-       
+
     }
-   
+
     .header-text-container h1 {
-        font-size: 1.5rem;
-        padding-top: 5%;
+        font-size: .5rem;
+        padding: 5%;
     }
 
     .header-text-container h3 {
-        font-size: .85rem;
+        font-size: .2rem;
         width: 85%;
+        padding: 5%;
         margin: 0 auto;
     }
 
@@ -170,16 +298,12 @@
         width: 85%;
         text-align: center;
         margin: 0 auto;
-       
+
     }
 
     .middle-section-text-container h3 {
         font-size: .95rem;
         color: @white;
-    }
-
-    .bottom-section h1 {
-        font-size: 2rem;
     }
 
     .data-container {
@@ -213,37 +337,48 @@
 @media @mobile-medium {
     .header {
         height: 20vh;
-       display: block;
-       position: relative;
+        display: block;
+        position: relative;
     }
-    .hrf-logo-img-container{
-       height:fit-content;
-       position: absolute;
-       top: 0;
-       left: 0;
-       margin: 2% 2%;
+
+    .hrf-logo-img-container {
+        height: fit-content;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 2% 2%;
     }
 
     .hrf-logo-img-container img {
         height: 30px;
         width: 48px;
-       
+
     }
-   
+
     .header-text-container h1 {
         font-size: 1.5rem;
         padding-top: 5%;
     }
 
-    .header-text-container h3 {
-        font-size: .85rem;
+    .header-text-container h2 {
+        font-size: .8rem;
         width: 85%;
         margin: 0 auto;
     }
 
     .graphs-section {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 100%;
+        height: 100%;
+        padding: 2%;
+        margin-bottom: 2%;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2%;
     }
 
     .grant-rates-by-office-graph-container {
@@ -256,6 +391,8 @@
     }
 
     .gr-nationality-img {
+        width: 50px;
+        height: 60px;
         margin-bottom: 8%;
     }
 
@@ -271,7 +408,7 @@
         background-color: @secondary-color;
         padding-top: 5%;
         text-align: center;
-        
+
     }
 
     .hrf-img {
@@ -281,7 +418,7 @@
 
     .middle-section-text-container {
         width: 85%;
-       text-align: center;
+        text-align: center;
         margin: 0 auto;
     }
 
@@ -290,9 +427,6 @@
         color: @white;
     }
 
-    .bottom-section h1 {
-        font-size: 2.1rem;
-    }
 
     .data-container {
         display: flex;
@@ -319,6 +453,7 @@
         width: 35%;
     }
 
+    /////////// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
     .ant-space-align-center {
         display: flex;
         flex-wrap: wrap;
@@ -328,22 +463,23 @@
 @media @mobile-large {
     .header {
         height: 20vh;
-       display: block;
-       position: relative;
+        display: block;
+        position: relative;
     }
-    .hrf-logo-img-container{
-       height:fit-content;
-       position: absolute;
-       top: 0;
-       left: 0;
-       margin: 2% 2%;
+
+    .hrf-logo-img-container {
+        height: fit-content;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 2% 2%;
     }
 
     .hrf-logo-img-container img {
         height: 30px;
         width: 48px;
     }
-   
+
     .header-text-container h1 {
         font-size: 1.5rem;
         padding-top: 5%;
@@ -394,7 +530,7 @@
 
     .middle-section-text-container {
         width: 85%;
-       text-align: center;
+        text-align: center;
         margin: 0 auto;
     }
 
@@ -436,29 +572,30 @@
         display: flex;
         flex-wrap: wrap;
     }
-    
+
 }
 
 @media @tablet-small {
     .header {
         height: 30vh;
-       display: block;
-       position: relative;
+        display: block;
+        position: relative;
     }
-    .hrf-logo-img-container{
-       height:fit-content;
-       position: absolute;
-       top: 0;
-       left: 0;
-       margin: 1% 1%;
+
+    .hrf-logo-img-container {
+        height: fit-content;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 1% 1%;
     }
 
     .hrf-logo-img-container img {
         height: 66px;
         width: 108px;
-       
+
     }
-   
+
     .header-text-container h1 {
         font-size: 2.5rem;
         padding-top: 5%;
@@ -518,10 +655,6 @@
         color: @white;
     }
 
-    .bottom-section h1 {
-        font-size: 2.7rem;
-    }
-
     .data-container {
         display: flex;
         flex-wrap: wrap;
@@ -556,23 +689,24 @@
 @media @tablet-large {
     .header {
         height: 30vh;
-       display: block;
-       position: relative;
+        display: block;
+        position: relative;
     }
-    .hrf-logo-img-container{
-       height:fit-content;
-       position: absolute;
-       top: 0;
-       left: 0;
-       
+
+    .hrf-logo-img-container {
+        height: fit-content;
+        position: absolute;
+        top: 0;
+        left: 0;
+
     }
 
     .hrf-logo-img-container img {
         height: 83px;
         width: 136px;
-       
+
     }
-   
+
     .header-text-container h1 {
         font-size: 3.5rem;
         padding-top: 5%;
@@ -625,6 +759,7 @@
         height: 232px;
         width: 450px;
     }
+
     .grant-rates-over-time-container p {
         font-size: 2.5rem;
     }
@@ -660,9 +795,6 @@
         color: @white;
     }
 
-    .bottom-section h1 {
-        font-size: 3.5rem;
-    }
 
     .data-container {
         display: flex;
@@ -674,9 +806,11 @@
         width: 85%;
         margin-bottom: 5%;
     }
+
     .first-data-point-container h2 {
-       font-size: 3.5rem;
+        font-size: 3.5rem;
     }
+
     .first-data-point-container h3 {
         font-size: 1.5rem;
     }
@@ -685,23 +819,27 @@
         width: 85%;
         margin-bottom: 5%;
     }
+
     .second-data-point-container h2 {
         font-size: 3.5rem;
-     }
-     .second-data-point-container h3 {
-         font-size: 1.5rem;
-     }
+    }
+
+    .second-data-point-container h3 {
+        font-size: 1.5rem;
+    }
 
     .third-data-point-container {
         width: 85%;
         margin-bottom: 5%;
     }
+
     .third-data-point-container h2 {
         font-size: 3.5rem;
-     }
-     .third-data-point-container h3 {
-         font-size: 1.5rem;
-     }
+    }
+
+    .third-data-point-container h3 {
+        font-size: 1.5rem;
+    }
 
     .back-to-top {
         width: 35%;
@@ -722,18 +860,18 @@
     }
 
     .header-text-container h1 {
-        font-size: 2.8rem;
+        font-size: 2rem;
         padding-top: 5%;
     }
 
     .header-text-container h3 {
-        font-size: 1.4rem;
+        font-size: 1rem;
         width: 75%;
         margin: 0 auto;
     }
 
     .middle-section {
-        display:flex;
+        display: flex;
         width: 100%;
         justify-content: space-evenly;
         padding: 0 2%;
@@ -751,8 +889,7 @@
         padding: 0 2%;
     }
 
-   
- .first-data-point-container {
+    .first-data-point-container {
         width: 23%;
     }
 
@@ -763,7 +900,7 @@
     .third-data-point-container {
         width: 23%;
     }
-    
+
     .back-to-top {
         width: 35%;
     }

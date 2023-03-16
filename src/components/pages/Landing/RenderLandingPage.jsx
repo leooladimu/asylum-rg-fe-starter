@@ -1,14 +1,20 @@
 import React from 'react';
 // ADD IMPORTS BACK FOR GRAPHS SECTION
-// import GrantRatesByOfficeImg from '../../../styles/Images/bar-graph-no-text.png';
-// import GrantRatesByNationalityImg from '../../../styles/Images/pie-chart-no-text.png';
-// import GrantRatesOverTimeImg from '../../../styles/Images/line-graph-no-text.png';
+import AllOfficesRoute from '../../pages/DataVisualizations/AllOfficesRoute';
+import GraphsContainer from '../../pages/DataVisualizations/GraphsContainer';
+import SingleOfficeRoute from '../../pages/DataVisualizations/SingleOfficeRoute';
+import ViewSelect from '../../pages/DataVisualizations/ViewSelect';
+import GrantRatesByOfficeImg from '../../../styles/Images/bar-graph-no-text.png';
+import GrantRatesByNationalityImg from '../../../styles/Images/pie-chart-no-text.png';
+import GrantRatesOverTimeImg from '../../../styles/Images/line-graph-no-text.png';
 import HrfPhoto from '../../../styles/Images/paper-stack.jpg';
 import '../../../styles/RenderLandingPage.less';
 import { Button } from 'antd';
+
 import { useHistory } from 'react-router-dom';
+import { Table } from '.';
 // for the purposes of testing PageNav
-// import PageNav from '../../common/PageNav';
+import PageNav from '../../common/PageNav';
 
 function RenderLandingPage(props) {
   const scrollToTop = () => {
@@ -31,18 +37,53 @@ function RenderLandingPage(props) {
         </div>
       </div>
 
-      {/* Graphs Section: Add code here for the graphs section for your first ticket */}
-      {/* <div className="graphs-section"> */}
-      <div className="view-more-data-btn-container">
-        <Button
-          type="default"
-          style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
-          onClick={() => history.push('/graphs')}
-        >
-          View the Data
-        </Button>
+      {/* Graphs Section: Add code here for the graphs section for your first ticket put download-button next to view-more-data-button */}
+      <div className="image-container">
+        <img
+          style={{ width: '17em', height: '10em' }}
+          src={GrantRatesByOfficeImg}
+          alt="Grant Rates By Office"
+        />
+        <img
+          style={{ width: '15em', height: '13em' }}
+          src={GrantRatesByNationalityImg}
+          alt="Grant Rates By Nationality"
+        />
+        <img
+          style={{ width: '17em', height: '10em' }}
+          src={GrantRatesOverTimeImg}
+          alt="Grant Rates Over Time"
+        />
       </div>
+      <div className="image-text-container">
+        <h3>Search Grant Rates By Office</h3>
+        <h3>Search Grant Rates By Nationality</h3>
+        <h3>Search Grant Rates Over Time</h3>
+      </div>
+      <div className="graphs-section">
+        <div className="view-more-data-btn-container">
+          <Button
+            type="default"
+            style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
+            onClick={() => history.push('/graphs')}
+          >
+            View the Data
+          </Button>
 
+          <Button
+            name="download-button"
+            type="default"
+            style={{
+              backgroundColor: '#404C4A',
+              color: '#FFFFFF',
+              marginLeft: '1em',
+            }}
+            onClick={() => history.push('/download')}
+          >
+            Download the Data
+          </Button>
+        </div>
+      </div>
       <div className="middle-section">
         <div className="hrf-img-container">
           <img src={HrfPhoto} alt="Human Rights First" className="hrf-img" />
@@ -59,9 +100,50 @@ function RenderLandingPage(props) {
           </h3>
         </div>
       </div>
-      <div>
-        {/* Bottom Section: Add code here for the graphs section for your first ticket */}
-        {/* <div className="bottom-section">*/}
+      {/* Bottom Section: Add code here for the graphs section for your first ticket */}
+      <div className="bottom-section">
+        <h1>Systemic Disparity Insights</h1>
+        <div
+          className="graph-info-container"
+          style={{ display: 'flex', margin: '1em' }}
+        >
+          <div className="trump-data">
+            <div className="thirty-six">
+              <h1>36%</h1>
+            </div>
+            <p>
+              By the end of the Trump administration, the average asylum office
+              grant rate had fallen 36 percent from an avaerage 44 oercent in
+              fiscal year 2016 to 28 percent in fiscal year 2020.
+            </p>
+          </div>
+          <div className="ny-data">
+            <div className="five-percent">
+              <h1>5%</h1>
+            </div>
+            <p>
+              The New York asylum office grant rate dropped 5 percent in fiscal
+              year 2020.
+            </p>
+          </div>
+          <div className="six-times">
+            <div className="six">
+              <h1>6x Lower</h1>
+            </div>
+            <p>
+              Between fiscal years 2017 and 2020, the New York asylum office's
+              grant rate was six rimes lower than the San Francisco asylum
+              office's.
+            </p>
+          </div>
+        </div>
+        <Button
+          type="default"
+          style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
+          onClick={() => scrollToTop()}
+        >
+          Read More
+        </Button>
         <p onClick={() => scrollToTop()} className="back-to-top">
           Back To Top ^
         </p>
