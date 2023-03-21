@@ -87,8 +87,9 @@
     "format": "prettier --write 'src/**/*.{js,jsx,css,scss}'",
     "lint": "eslint 'src/**/*.{js,jsx}'",
     "prettier": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
-    "start": "node start.js",
+    "start": "PORT=3006 node start.js",
     "version": "nvm i 16.16.0",
+    "use": "nvm use v16.16.0",
     "kill-it": "npx kill-port 3000",
     "test": "craco test --env=jest-environment-jsdom-sixteen"
   },
